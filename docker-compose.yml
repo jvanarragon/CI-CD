@@ -1,0 +1,15 @@
+--- 
+services: 
+  jenkins: 
+    image: "jenkins:latest"
+    ports: 
+      - "8080:8080"
+    volumes: 
+      - "jenkins-data:/data"
+  sonarqube: 
+    image: "sonarqube:latest"
+    ports: 
+      - "9000:9000"
+version: "3"
+volumes: 
+  jenkins-data: ~
